@@ -25,6 +25,20 @@
 // Only one valid answer exists.
 
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+
+// Solution
+// Approach 1: Brute Force
+// Algorithm
+// The brute force approach is simple. Loop through each element x 
+// and find if there is another value that equals to target −x.
+
+// Complexity Analysis
+// Time complexity: O(n^2).
+// For each element, we try to find its complement by looping through the rest of the array which takes O(n) time. 
+// Therefore, the time complexity is O(n^2).
+// Space complexity: O(1).
+// The space required does not depend on the size of the input array, so only constant space is used.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
