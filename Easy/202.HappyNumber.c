@@ -33,6 +33,8 @@ Constraints:
 
 // Approach 2: Floyd's Cycle-Finding Algorithm
 
+#include <stdbool.h>
+
 int getNext(int n)
 {
   int totalSum = 0;
