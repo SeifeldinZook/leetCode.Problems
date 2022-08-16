@@ -49,6 +49,8 @@ var hasCycle = function (head) {
   return false;
 
   /* 
+  // Fast and Slow Pointers Technique in Linked List
+  // Tortoise & Hare Algorithm || Floyd’s Cycle Detection Algorithm
   // O(1) (i.e. constant) memory?
   let fast = head;
   while (fast && fast.next) {
