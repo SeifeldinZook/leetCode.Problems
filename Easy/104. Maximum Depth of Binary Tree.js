@@ -37,9 +37,9 @@ The number of nodes in the tree is in the range [0, 104].
 STEPS:  1- define an array to store arrays of each level
         2- define a queue the includes the trees of the same level
           ==> at the begining it will be initilaized to the root
-        3- loop until there's no elements in the queue
+        3- loop until there's no elements in the queue (while loop)
           ==> define an array that will include the current level nodes
-          ==> Loop on the current trees length (while loop)
+          ==> Loop on the current trees length 
               ==> get the node
               ==> add it to the current level nodes array
               ==> if there's left subtree
