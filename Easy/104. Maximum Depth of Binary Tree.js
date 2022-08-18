@@ -18,7 +18,7 @@ Output: 2
 Constraints:
 The number of nodes in the tree is in the range [0, 104].
 -100 <= Node.val <= 100
- */
+*/
 
 /**
  * Definition for a binary tree node.
@@ -33,26 +33,43 @@ The number of nodes in the tree is in the range [0, 104].
  * @return {number}
  */
 
+/* 
+STEPS:  1- define an array to store arrays of each level
+        2- define a queue the includes the trees of the same level
+          ==> at the begining it will be initilaized to the root
+        3- loop until there's no elements in the queue
+          ==> define an array that will include the current level nodes
+          ==> Loop on the current trees length (while loop)
+              ==> get the node
+              ==> add it to the current level nodes array
+              ==> if there's left subtree
+                ==> add it to the current level trees array
+              ==> if there's right subtree
+                ==> add it to the current level trees array
+          add current level nodes to the output
+
+*/
+
 var maxDepth = function (root) {
   let output = [];
-  currentLevelNodes = [];
+  let currentLevelTrees = [];
 
-  if (root) currentLevelNodes.push(root);
+  if (root) currentLevelTrees.push(root);
 
-  while (currentLevelNodes.length > 0) {
-    current = [];
-    let len = currentLevelNodes.length;
+  while (currentLevelTrees.length > 0) {
+    let currentLevelNodes = [];
+    let len = currentLevelTrees.length;
     for (let i = 0; i < len; i++) {
-      let node = currentLevelNodes.shift();
-      current.push(node.val);
+      let node = currentLevelTrees.shift();
+      currentLevelNodes.push(node.val);
       if (node.left) {
-        currentLevelNodes.push(node.left);
+        currentLevelTrees.push(node.left);
       }
       if (node.right) {
-        currentLevelNodes.push(node.right);
+        currentLevelTrees.push(node.right);
       }
     }
-    output.push(current);
+    output.push(currentLevelNodes);
   }
   return output.length;
 };
