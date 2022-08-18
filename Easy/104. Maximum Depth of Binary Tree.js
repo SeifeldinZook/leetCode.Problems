@@ -51,7 +51,7 @@ STEPS:  1- define an array to store arrays of each level
 
 var maxDepth = function (root) {
   let output = [];
-  let currentLevelTrees = [];
+  let currentLevelTrees = []; // Queue
 
   if (root) currentLevelTrees.push(root);
 
@@ -59,7 +59,7 @@ var maxDepth = function (root) {
     let currentLevelNodes = [];
     let len = currentLevelTrees.length;
     for (let i = 0; i < len; i++) {
-      let node = currentLevelTrees.shift();
+      let node = currentLevelTrees.shift(); // FIFO
       currentLevelNodes.push(node.val);
       if (node.left) {
         currentLevelTrees.push(node.left);
