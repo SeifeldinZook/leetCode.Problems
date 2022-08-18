@@ -47,7 +47,6 @@ STEPS:  1- define an array to store arrays of each level
               ==> if there's right subtree
                 ==> add it to the current level trees array
           add current level nodes to the output
-
 */
 
 var maxDepth = function (root) {
