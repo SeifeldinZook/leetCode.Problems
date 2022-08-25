@@ -46,9 +46,9 @@ Both list1 and list2 are sorted in non-decreasing order.
 
 var mergeTwoLists = function (l1, l2) {
   let currentNode = new ListNode();
-  let head = list;
+  let head = currentNode;
 
-  while (l1 !== null && l2 !== null) {
+  while (l1 && l2) {
     // Select the smallest value from either linked list,
     // then increment that list forward.
     if (l1.val < l2.val) {
