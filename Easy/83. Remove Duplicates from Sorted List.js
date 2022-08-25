@@ -52,6 +52,8 @@ var deleteDuplicates = function (head) {
   }
   return noDuplicatesHead.next;
 };
+
+// Another Solution
 /* 
 var deleteDuplicates = function (head) {
   let noDuplicates = head;
